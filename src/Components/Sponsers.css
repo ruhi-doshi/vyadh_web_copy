@@ -1,0 +1,51 @@
+
+.sponsor-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    padding: 1.5vw;
+    border-radius: 4vw;
+}
+
+.sponsor-card:hover {
+    transform: scale(1.1); /* Pop-up effect */
+    background-color: #2D3A45; /* Dark Blue shade (replace with your theme color) */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.sponsor-card img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.sponsor-card:hover img {
+    transform: scale(1.05); /* Slight scaling for the logo */
+}
+
+/* Responsive styling */
+
+  
+@media (max-width: 768px) {
+    .responsive-grid {
+      grid-template-columns: 1fr !important; /* One sponsor per row */
+      gap: 2vw; /* Reduce gap for smaller screens */
+      margin-left:30%;
+      
+    }
+  }
+
+@media (max-width: 426px) {
+  .responsive-grid {
+    grid-template-columns: 1fr !important; /* One sponsor per row */
+    gap: 2vw; /* Reduce gap for smaller screens */
+    margin-left:25%;
+    
+  }
+}
+@media (max-width: 325px) {
+    .responsive-grid {
+      grid-template-columns: 1fr !important; /* One sponsor per row */
+      gap: 2vw; /* Reduce gap for smaller screens */
+      margin-left:25%;
+      
+    }
+  }

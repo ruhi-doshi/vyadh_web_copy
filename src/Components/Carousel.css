@@ -1,0 +1,355 @@
+/* Global styles */
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+
+body {
+    background-color: #03002A;
+    font-family: 'Lobster';
+    margin: 0;
+    padding: 0;
+  /*  overflow: hidden;*/
+    position: relative;
+    overflow-x: hidden;
+}
+.carousel-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+/* Title styles *//* Title styles */
+/* Remove absolute positioning from .carousel-title */
+.carousel-title {
+    position: relative; /* Change from absolute to relative */
+    margin-bottom: 20px; /* Add margin below the heading */
+    font-size: clamp(20px, 5vw, 60px);
+    color: #FFFFFF;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    z-index: 2;
+    line-height: 1.2;
+}
+
+/* Adjust carousel container spacing */
+#carousel {
+    position: relative;
+    height: 80vh;
+    width: 90vw;
+    max-width: 1200px;
+    margin: 20px auto; /* Add consistent margin on all sides */
+    padding: 20px 1% 1% 1%;
+}
+
+
+/* Arrow styles */
+.arrow {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #228291;
+    line-height: 50px;
+    top: 25%;
+    transform: translateY(-50%);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Arrow icons */
+.arrow-left::before {
+    content: '\21D0';
+    font-size: 30px;
+    color: #228291;
+}
+
+.arrow-right::before {
+    content: '\21D2';
+    font-size: 30px;
+    color: #228291;
+}
+
+/* Position arrows */
+.arrow-left {
+    left: -35%;
+
+}
+
+.arrow-right {
+    right: -30%; 
+}
+
+/* Item styles */
+.item {
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    
+    position: absolute;
+    transition: height 1s, width 1s, left 1s, margin-top 1s, line-height 1s, background-color 1s;
+    overflow: hidden;
+    margin: 0 15px;
+}
+
+/* Levels with spacing */
+.level-2 {
+    height: 50%;
+    width: 25%;
+    line-height: 150px;
+    background-color: #228291;
+    left: 97%;
+}
+
+.level-1 {
+    height: 60%;
+    width: 30%;
+    line-height: 180px;
+    background-color: #6796E5;
+    left: 66%;
+}
+
+.level0 {
+    height: 70%;
+    width: 35%;
+    line-height: 200px;
+    background-color: #4EC9E1;
+    left: 30%;
+}
+
+.level1 {
+    height: 60%;
+    width: 30%;
+    line-height: 180px;
+    background-color: #6796E5;
+    left: -1%;
+}
+
+.level2 {
+    height: 50%;
+    width: 25%;
+    line-height: 150px;
+    background-color: #a39ee0;
+    left: -28%;
+}
+
+/* Transition styles */
+.left-enter,
+.right-enter {
+    opacity: 0;
+}
+
+.left-enter-active,
+.right-enter-active {
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+.left-exit,
+.right-exit {
+    opacity: 1;
+}
+
+.left-exit-active,
+.right-exit-active {
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+/* Prevent text selection */
+.noselect {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1440px) {
+
+    /* Centering body content */
+    .body {
+        align-items: center;
+        margin-top: 10%;
+        
+    }
+
+    /* Hide all but the center div */
+    .level2,  .level-2 {
+        display: none;
+    }
+    .level-1 {
+        height: 40%;
+        width: 20%;
+        margin-top: 10%;
+        left:80%;
+        transform: translateX(-50%);
+    }
+
+    .level0 {
+        height: 80%;
+        width: 40%;
+        transform: translateX(-50%);
+        left: 48%;
+    }
+    .level1 {
+        height: 40%;
+        width: 20%;
+        margin-top: 10%;
+        left:16%;
+        transform: translateX(-50%);
+    }
+    
+
+    /* Adjust the arrows for smaller screens */
+    .arrow-left {
+        left: -1%;
+        top: 25%;
+    }
+
+    .arrow-right {
+        left: 95%;
+        top: 25%;
+    }
+
+    /* Reduce title size */
+    .carousel-title {
+        font-size: 28px;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    /* Centering body content */
+    .body {
+        align-items: center;
+    }
+    .carousel-title {
+        position: relative;
+        top: 10px;
+        font-size: 20px;
+        color: #FFFFFF;
+        font-weight: bold;
+        text-align: center;
+        z-index: 2;
+    }
+
+    /* Hide all but the center div */
+    .level-2, .level2, .level1, .level-1 {
+        display: none;
+    }
+
+    .level0 {
+        height: 70%;
+        width: 70%;
+        left :50%;
+        
+        top:20%;
+        transform: translateX(-50%);
+    }
+
+    /* Adjust the arrows for smaller screens */
+    .arrow-left {
+        left: -15%;
+        top: 25%;
+    }
+
+    .arrow-right {
+        left: 75%;
+        top: 25%;
+    }
+
+    /* Reduce title size */
+    .carousel-title {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 426px) {
+
+    /* Further adjustments for very small screens */
+    .level0 {
+        height: 50%;
+        width: 65%;
+        left: 50%;
+        top: 25%;
+        align-items: center;
+    }
+    .carousel-title {
+        position: absolute;
+        top: 10px;
+        font-size: 20px;
+        color: #FFFFFF;
+        font-weight: bold;
+        text-align: center;
+        z-index: 2;
+    }
+    /* Adjust arrows */
+    .arrow-right {
+        width: 40px;
+        height: 40px;
+        font-size: 24px;
+        left: 65%;
+    }
+    .arrow-left {
+        width: 40px;
+        height: 40px;
+        font-size: 24px;
+        left: -15%;
+    }
+
+    /* Reduce title size */
+    .carousel-title {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 375px) {
+
+
+    .carousel-title {
+        position: absolute;
+        top: 10px;
+        font-size: 5%;
+        color: #FFFFFF;
+        font-weight: bold;
+        text-align: center;
+        z-index: 2;
+    }
+    /* Further adjustments for very small screens */
+    .level0 {
+        height: 50%;
+        width: 60%;
+        left: 45%;
+        top: 15%;
+    }
+
+    /* Adjust arrows */
+    .arrow-right {
+        width: 40px;
+        height: 40px;
+        font-size: 24px;
+        left: 65%;
+    }
+    .arrow-left {
+        width: 40px;
+        height: 40px;
+        font-size: 24px;
+        left: -15%;
+    }
+
+    /* Reduce title size */
+    .carousel-title {
+        font-size: 14px;
+    }
+}

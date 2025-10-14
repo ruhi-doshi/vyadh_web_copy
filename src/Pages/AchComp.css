@@ -1,0 +1,13 @@
+.parallax-container {
+    background-image: url('../Assets/topmars.png'); /* Replace with your image path */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .content-container {
+    background: rgba(0, 0, 0, 0.7); /* Optional overlay effect */
+    padding: 4rem 0;
+  }
+  

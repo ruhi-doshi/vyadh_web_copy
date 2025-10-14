@@ -1,0 +1,73 @@
+/* Flip animation for card */
+.group:hover .group-hover\:\[transform\:rotateY\(180deg\)\] {
+  transform: rotateY(180deg);
+}
+
+/* Title Styling */
+.competitions-heading {
+  font-weight: bold;
+  margin: 20px 0;
+  background: -webkit-linear-gradient(white, #03002A);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
+/* Large screens */
+@media (min-width: 768px) {
+  .competitions-heading {
+    font-size: 50px;
+    letter-spacing: 15px;
+  }
+}
+
+/* Medium screens */
+@media (max-width: 768px) {
+  .competitions-heading {
+    font-size: 40px;
+    letter-spacing: 10px;
+  }
+}
+
+/* Small screens */
+@media (max-width: 425px) {
+  .competitions-heading {
+    font-size: 30px;
+    letter-spacing: 8px;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 375px) {
+  .competitions-heading {
+    font-size: 25px;
+    letter-spacing: 6px;
+  }
+}
+
+/* Ensure spacing between cards */
+.competitions-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem; /* ~gap-10 */
+  width: 100%;
+  max-width: 80rem; /* ~max-w-7xl */
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 640px) {
+  .competitions-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem; /* ~gap-16 */
+    padding: 0 4rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .competitions-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6rem; /* ~gap-24 */
+    padding: 0 4rem;
+  }
+}

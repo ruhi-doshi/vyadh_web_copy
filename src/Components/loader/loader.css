@@ -1,0 +1,73 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Fullscreen container */
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #03002A;
+    overflow: hidden;
+  }
+  
+  .loader {
+    perspective: 1000px;
+    width: 120px;
+    height: 120px;
+    position: relative;
+  }
+  
+  /* Rotating cube container */
+  .cube {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    animation: spin 3s infinite linear;
+  }
+  
+  /* Cube faces */
+  .side {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(0, 209, 255, 0.6);
+    box-shadow: 0 0 10px rgba(0, 209, 255, 0.8), inset 0 0 15px rgba(0, 209, 255, 0.6);
+  }
+  
+  /* Positioning each face */
+  .front {
+    transform: rotateY(0deg) translateZ(60px);
+  }
+  .back {
+    transform: rotateY(180deg) translateZ(60px);
+  }
+  .left {
+    transform: rotateY(-90deg) translateZ(60px);
+  }
+  .right {
+    transform: rotateY(90deg) translateZ(60px);
+  }
+  .top {
+    transform: rotateX(90deg) translateZ(60px);
+  }
+  .bottom {
+    transform: rotateX(-90deg) translateZ(60px);
+  }
+  
+  /* Animation for the cube */
+  @keyframes spin {
+    0% {
+      transform: rotateX(0deg) rotateY(0deg);
+    }
+    100% {
+      transform: rotateX(360deg) rotateY(360deg);
+    }
+  }
+  

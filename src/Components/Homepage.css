@@ -1,0 +1,372 @@
+/* Universal Selector for Box Sizing */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@300;400;700&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+
+}
+
+/* Reset Margins and Paddings */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: -10%;
+  position: relative;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  
+}
+
+/* Navbar Styles */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--vyadhColor-100);
+  color: white;
+}
+
+.logo {
+  height: 7.75vw;
+  width: 11.85vw;
+}
+
+.menu {
+  position: relative;
+}
+
+.menu-button {
+  background-color: var(--vyadhColor-100);
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.menu-icon {
+  width: 8vw;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: var(--vyadhColor-100);
+  color: white;
+  list-style: none;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.menu-button:focus + .dropdown-menu,
+.menu-button:hover + .dropdown-menu {
+  display: block;
+}
+
+.desktop-menu {
+  display: none;
+}
+
+.desktop-menu-list {
+  display: flex;
+  gap: 2rem;
+}
+
+.desktop-menu-list li {
+  list-style: none;
+}
+
+.desktop-menu-list li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Homepage Styles */
+.homepage {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 1s ease-in-out;
+  opacity: 1;
+}
+
+.homepage::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80%;
+  background: linear-gradient(to top, #03002a,rgba(3, 0, 42, 0.8),  transparent);
+  pointer-events: none;
+  z-index: 1;
+  
+}
+
+.paragraph {
+  width: 40%;
+  padding: 2rem;
+  margin: 32% 0 0 5%;
+  color: white;
+  font-family: 'DM Sans', sans-serif; /* Updated font for paragraph */
+
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 2;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.paragraph.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.paragraph.fade-out {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.paragraph h2 {
+  font-family: 'Anton', sans-serif; /* Keep the bold impactful style */
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 2.2rem; /* smaller than 3rem */
+}
+
+/* Medium screens */
+@media (max-width: 1024px) {
+  .paragraph h2 {
+    font-size: 2rem;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .paragraph h2 {
+    font-size: 1.8rem;
+  }
+}
+/* Move text upwards */
+.paragraph {
+  width: 40%;
+  padding: 2rem;
+  margin: 25% 0 0 5%; /* was 32%, reduced to lift text up */
+  color: white;
+  font-family: 'DM Sans', sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 2;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+/* Add more breathing room around carousel */
+.carousel {
+  width: 55%; /* slightly wider */
+  position: absolute;
+  bottom: 5%; /* was 0 → gives padding from bottom */
+  right: 2%;   /* was 0 → adds a little right-side padding */
+  overflow: hidden;
+  z-index: 2;
+}
+
+/* Give slides more space */
+.slick-slide {
+  padding: 0 15px; /* was 5px → increases gap between items */
+}
+
+/* Larger image container padding */
+.image-container {
+  width: 360px;   /* slight increase */
+  height: 420px;  /* slight increase */
+  margin: 10px;   /* adds spacing around each image */
+  border: 2px solid white;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .paragraph h2 {
+    font-size: 1.4rem;
+  }
+}
+
+.paragraph p {
+  font-size: 1.5rem;
+}
+
+.carousel {
+  width: 50%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.slick-slide {
+  padding: 0 5px;
+  width: auto !important;
+}
+
+.image-container {
+  width: 350px;
+  height: 400px;     /* smaller height */
+  border: 2px solid white;
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.05); /* subtle background */
+  transition: transform 0.3s ease;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* prevents stretching */
+}
+
+
+
+.slick-list {
+  margin: 0 -5px;
+  overflow: visible;
+}
+
+.slick-track {
+  display: flex;
+  align-items: flex-start;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .paragraph {
+    width: 80%;
+    margin: 0;
+    padding: 1rem;
+    top: 30%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .paragraph h2 {
+    font-size: 1rem;
+  }
+
+  .paragraph p {
+    font-size: 1rem;
+  }
+
+  .carousel {
+    width: 90%;
+    bottom: 5%;
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  .slick-slide {
+    padding: 0 2px;
+  }
+
+  .image-container {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .image-container img {
+    height: auto;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .paragraph {
+    width: 90%;
+    margin: 32% 0 0 5%;
+    padding: 0.5rem;
+    top: 10%;
+    left: 4%;
+    transform: translate(-50%, -50%);
+   
+
+  }
+  @media (max-width: 768px) {
+  .image-container {
+    width: 140px;
+    height: 160px;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-container {
+    width: 120px;
+    height: 140px;
+  }
+}
+
+
+  .paragraph h2 {
+    font-size: 1.5rem;
+  }
+
+  .paragraph p {
+    font-size: 0.875rem;
+  }
+
+  .carousel {
+    width: 60%;
+    bottom: 10%;
+  }
+
+  .image-container {
+    width: 100%;
+    height: auto;
+  }
+
+  .slick-slide {
+    padding: 0 1px;
+  }
+}
+/* Logo styling */
+.logo-top-left {
+  position: absolute;
+  top: 1vw;
+  left: 1vw;
+  height: calc(10vw - 10px);
+  width: calc(15vw - 5px);
+  z-index: 3; /* Ensure it appears on top */
+}
+
+@media (max-width: 768px) {
+  .logo-top-left {
+    height: calc(6vw - 10px);
+    width: calc(9vw - 5px);
+  }
+}
+  @media (max-width: 425px) {
+    .logo-top-left {
+      height: calc(5vw - 15px);
+      width: calc(7vw - 3px);
+    }
+}

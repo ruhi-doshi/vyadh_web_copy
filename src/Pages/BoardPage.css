@@ -1,0 +1,136 @@
+
+.board-page {
+  text-align: center;
+  margin-top: 250px;
+}
+
+@media (max-width: 768px) {
+  .board-page {
+    margin-top: 150px; 
+  }
+}
+
+/* Switch container */
+.switch-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap; 
+}
+
+@media (max-width: 768px) {
+  .switch-container {
+    justify-content: center; 
+    margin-bottom: 15px; 
+  }
+}
+
+
+.switch-div {
+  padding: 20px;
+  font-size: 26px;
+  background-color: #03002A; 
+  color: white;
+  align-items: center;
+  border-radius: 30px;
+  cursor: pointer;
+  margin: 10px 5px; 
+  width: 250px;
+  height: 80px;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 1024px) {
+  .switch-div {
+    width: 220px; 
+    height: 70px; 
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .switch-div {
+    width: 180px; 
+    height: 60px; 
+    font-size: 20px; 
+  }
+}
+
+.switch-div.active {
+  background-color: #2F2882;
+  color: white;
+  font-size: 28px;
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 1024px) {
+  .switch-div.active {
+    font-size: 26px; 
+  }
+}
+
+@media (max-width: 768px) {
+  .switch-div.active {
+    font-size: 22px; 
+  }
+}
+
+.switch-div:hover {
+  background-color: #2F2882;
+  box-shadow: 0 0 15px rgba(47, 40, 130, 0.7);
+  transform: scale(1.05);
+}
+
+.switch-div.active:hover {
+  background-color: #2F2882;
+  box-shadow: 0 0 15px rgba(47, 40, 130, 0.7);
+  transform: scale(1.1);
+}
+
+.switch-div:not(.active):hover {
+  background-color: #03002A;
+  box-shadow: 0 0 15px rgba(3, 0, 42, 0.7);
+  transform: scale(1.05);
+}
+
+.switch-div::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border-radius: 34px;
+  border: 2px solid transparent;
+  background: linear-gradient(45deg, #2F2882, #03002A);
+  z-index: -1;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  background-size: 200% 200%;
+}
+
+.switch-div:hover::before {
+  opacity: 1;
+  background-position: 100% 100%;
+  transition: opacity 0.4s ease, background-position 0.4s ease;
+}
+
+.fade-enter {
+  opacity: 0;
+}
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in-out;
+}
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+}
