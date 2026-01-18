@@ -28,7 +28,7 @@ const Homepage = () => {
       bgImage: '/templates/bg3.jpeg',
       heading: 'Vyadh: Where the journey is just the beginning.',
       paragraph: '',
-      carouselImage: '/templates/carousel3.png',
+      carouselImage: '/templates/carousel3 (1).png',
     },
     {
       bgImage: '/templates/bg4.jpeg',
@@ -133,7 +133,7 @@ const Homepage = () => {
           {content.map((item, index) => (
             <div key={index} className={`slide ${index === 0 ? 'first-slide' : ''}`}>
               <div className="image-container">
-                <img src={item.carouselImage} alt={`Carousel ${index + 1}`} />
+                <img src={item.carouselImage} alt={`Carousel ${index + 1}`} loading='lazy' />
               </div>
             </div>
           ))}

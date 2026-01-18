@@ -16,7 +16,7 @@ const Navbar = () => {
                     onClick={() => setShow(!show)}
                     className="flex items-center justify-center bg-vyadhColor-100 rounded-full cursor-pointer p-[1.5vw] m-[3vw]"
                 >
-                    <img src={menu} alt="menu" className="w-[6vw]" />
+                    <img src={menu} alt="menu" className="w-[6vw]" loading="lazy"/>
                 </button>
                 <ul
                     id="menu"
@@ -45,7 +45,7 @@ const Navbar = () => {
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="irc" className="block hover:text-blue-400 p-1">
+                                    <a href="urc" className="block hover:text-blue-400 p-1">   {/* change irc*/}
                                         URC
                                     </a>
                                 </li>
@@ -89,7 +89,7 @@ const Navbar = () => {
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="irc" className="block hover:text-blue-400 p-1">
+                                    <a href="urc" className="block hover:text-blue-400 p-1">
                                         URC
                                     </a>
                                 </li>

@@ -38,52 +38,167 @@ html, body {
   background: #0000;
 }
 
+
+/* body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  padding: 20px;
+} */
+
 .wrapper {
   height: 400px;
   width: 400px;
-  top:10%;
   position: relative;
   transform-style: preserve-3d;
   perspective: 1000px;
-  display:flex;
+  display: flex;
   margin: 30px;
+  cursor: pointer;
 }
 
 .wrapper .card {
   position: absolute;
-  height: 100%;
-  width: 100%;
+  height: 90%;
+  width: 90%;
   padding: 5px;
-  background: #2F2882;
+  background: linear-gradient(to bottom right, #1a2332, #0d1520);
   border-radius: 30px;
   transform: translateY(0deg);
   transform-style: preserve-3d;
   backface-visibility: hidden;
-  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(59, 130, 246, 0.3);
   transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+/* Front Face Styling */
+.wrapper .front-face {
+  transform: rotateY(0deg);
+  padding: 0;
+  overflow: hidden;
+  background: #8f4242;
 }
 
 .wrapper:hover > .front-face {
   transform: rotateY(-180deg);
 }
 
-.wrapper .card img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
+/* Back Face Styling */
 .wrapper .back-face {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   flex-direction: column;
   transform: rotateY(180deg);
+  background: linear-gradient(to bottom right, #1a2332, #0d1520);
+  position: relative;
+  overflow: hidden;
 }
 
 .wrapper:hover > .back-face {
   transform: rotateY(0deg);
+}
+
+/* Decorative corner accents on back face */
+.wrapper .back-face::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  border-top: 2px solid rgba(96, 165, 250, 0.3);
+  border-right: 2px solid rgba(96, 165, 250, 0.3);
+  border-top-right-radius: 25px;
+  pointer-events: none;
+}
+
+.wrapper .back-face::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  border-bottom: 2px solid rgba(96, 165, 250, 0.3);
+  border-left: 2px solid rgba(96, 165, 250, 0.3);
+  border-bottom-left-radius: 25px;
+  pointer-events: none;
+}
+
+.wrapper .front-face {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0;
+  overflow: hidden;
+}
+
+.wrapper .card img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 25px;
+}
+
+.wrapper .front-face .name-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+/* Back Face Styling */
+.wrapper .back-face {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  transform: rotateY(180deg);
+  background: linear-gradient(to bottom right, #1a2332, #0d1520);
+  position: relative;
+  overflow: hidden;
+}
+
+.wrapper:hover > .back-face {
+  transform: rotateY(0deg);
+}
+
+/* Decorative corner accents on back face */
+.wrapper .back-face::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  border-top: 2px solid rgba(96, 165, 250, 0.3);
+  border-right: 2px solid rgba(96, 165, 250, 0.3);
+  border-top-right-radius: 25px;
+  pointer-events: none;
+}
+
+.wrapper .back-face::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  border-bottom: 2px solid rgba(96, 165, 250, 0.3);
+  border-left: 2px solid rgba(96, 165, 250, 0.3);
+  border-bottom-left-radius: 25px;
+  pointer-events: none;
 }
 
 .wrapper .back-face img {
@@ -91,46 +206,71 @@ html, body {
   width: 150px;
   padding: 5px;
   border-radius: 50%;
-  background: #03002A;
+  background: linear-gradient(135deg, #1e3a5f, #0d1520);
+  border: 3px solid rgba(96, 165, 250, 0.5);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }
 
 .wrapper .back-face .info {
   text-align: center;
+  padding: 0 20px;
 }
 
 .back-face .info .title {
-  font-size: 24px;
-  font-weight: 500;
-  top:60%;
+  width: 90%;
+  font-size: 16px;
+  font-weight: 450;
+  line-height: 1.4;
+  color: #dbeafe;
+  margin: 0 auto;
+  font-style: italic;
+  opacity: 0.9;
 }
 
 .back-face ul {
   display: flex;
+  list-style: none;
+  gap: 10px;
+  margin-bottom: 10px;
 }
 
 .back-face ul a {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 40px;
   width: 40px;
-  color: #fff;
+  color: #60a5fa;
   text-align: center;
-  margin: 0 5px;
-  line-height: 38px;
   border: 2px solid transparent;
   border-radius: 50%;
-  background: #03002A;
+  background: rgba(96, 165, 250, 0.1);
   transition: all 0.5s ease;
+  text-decoration: none;
 }
 
 .back-face ul a:hover {
-  color: #1cc7d0;
-  border-color: #1cc7d0;
-  background: #03002A;
+  color: #93c5fd;
+  border-color: #60a5fa;
+  background: rgba(96, 165, 250, 0.2);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(96, 165, 250, 0.3);
 }
-.back-face .info .title {
-  width: 90%;
-  font-size: 16px; /* Reduced font size */
-  font-weight: 450;
-  line-height: 1; /* Decreased line height for reducing the gap */
-  top: 60%;
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .wrapper {
+    height: 350px;
+    width: 350px;
+    margin: 20px;
+  }
+  
+  .back-face .info .title {
+    font-size: 14px;
+  }
+  
+  .wrapper .back-face img {
+    height: 120px;
+    width: 120px;
+  }
 }

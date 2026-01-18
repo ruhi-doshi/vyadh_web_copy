@@ -35,10 +35,10 @@ const Board = () => {
       {/* card 1 */}
     <div className="wrapper">
       <div className="card front-face">
-        <img src={AvyayaMishraFront} alt=" " />
+        <img src={AvyayaMishraFront} alt=" " loading='lazy' />
       </div>
       <div className="card back-face">
-        <img src={Avyaya} alt="Back" />
+        <img src={Avyaya} alt="Back" loading='lazy' />
         
         <div className="info">
           <div className="title text-sm pt-8">"Leading with vision,we conquer the cosmos"</div>
@@ -57,11 +57,11 @@ const Board = () => {
   {/* card 2 */}
     <div className="wrapper">
     <div className="card front-face">
-      <img src={SriHariFront} alt=" " />
+      <img src={SriHariFront} alt=" " loading='lazy' />
        
     </div>
     <div className="card back-face">
-      <img src={SriHari} alt="Back" />
+      <img src={SriHari} alt="Back" loading='lazy' />
       
       <div className="info">
         <div className="title text-sm pt-8">"Together, we turn challenges into triumphs"</div>
@@ -80,10 +80,10 @@ const Board = () => {
   {/* card 3 */}
   <div className="wrapper">
     <div className="card front-face">
-      <img src={ApoorvGuptaFront} alt=" " />
+      <img src={ApoorvGuptaFront} alt=" " loading='lazy' />
     </div>
     <div className="card back-face">
-      <img src={Apoorv} alt="Back" />
+      <img src={Apoorv} alt="Back" loading='lazy' />
       
       <div className="info">
         <div className="title text-sm pt-8">"Innovation meets execution in every move"</div>
@@ -102,10 +102,10 @@ const Board = () => {
   {/* card 4 */}
   <div className="wrapper">
     <div className="card front-face">
-      <img src={YogavarshiniDFront} alt=" " />
+      <img src={YogavarshiniDFront} alt=" " loading='lazy' />
     </div>
     <div className="card back-face">
-      <img src={Yogavarshini} alt="Back" />
+      <img src={Yogavarshini} alt="Back" loading='lazy' />
       
       <div className="info">
         <div className="title text-sm pt-8">"Coordination is the key to our cosmic success"
@@ -124,10 +124,10 @@ const Board = () => {
 {/* card 5 */}
 <div className="wrapper">
     <div className="card front-face">
-      <img src={ReovwinJohnFront} alt=" " />
+      <img src={ReovwinJohnFront} alt=" " loading='lazy' />
     </div>
     <div className="card back-face">
-      <img src={Reovwin} alt="Back" />
+      <img src={Reovwin} alt="Back" loading='lazy' />
       
       <div className="info">
         <div className="title text-sm pt-8">"Empowering machines to think, move, and explore"</div>
@@ -145,10 +145,10 @@ const Board = () => {
 {/* card 6 */}
 <div className="wrapper">
     <div className="card front-face">
-      <img src={ChikirshaGulatiFront} alt=" " />
+      <img src={ChikirshaGulatiFront} alt=" " loading='lazy' />
     </div>
     <div className="card back-face">
-      <img src={Chikirsha} alt="Back" />
+      <img src={Chikirsha} alt="Back" loading='lazy' />
       
       <div className="info">
         <div className="title text-sm pt-8">"Data and discovery, the heart of our mission"</div>
@@ -167,10 +167,10 @@ const Board = () => {
 {/* card 7 */}
 <div className="wrapper">
     <div className="card front-face">
-      <img src={DhantanthriSFront} alt=" " />
+      <img src={DhantanthriSFront} alt=" " loading='lazy' />
     </div>
     <div className="card back-face">
-      <img src={Dhanvanthri} alt="Back" />
+      <img src={Dhanvanthri} alt="Back" loading='lazy' />
       
       <div className="info">
         <div className="title text-sm pt-8">"Every gear, every mechanism, a step toward success"</div>
@@ -189,10 +189,10 @@ const Board = () => {
 {/* card 8 */}
 <div className="wrapper">
     <div className="card front-face">
-      <img src={JashwanthRajuFront} alt=" " />
+      <img src={JashwanthRajuFront} alt=" " loading='lazy'/>
     </div>
     <div className="card back-face">
-      <img src={Jashwanth} alt="Back" />
+      <img src={Jashwanth} alt="Back" loading='lazy' />
       
       <div className="info">
         <div className="title text-sm pt-8">"Lighting the path to discovery"</div>
@@ -209,10 +209,10 @@ const Board = () => {
     {/* card 9 */}
 <div className="wrapper">
     <div className="card front-face">
-      <img src={AshnaChaudharyFront} alt=" " />
+      <img src={AshnaChaudharyFront} alt=" " loading='lazy' />
     </div>
     <div className="card back-face">
-      <img src={Ashna} alt="Back" />
+      <img src={Ashna} alt="Back" loading='lazy' />
       
       <div className="info">
         <div className="title text-sm pt-8">"Coding the path to the stars"</div>

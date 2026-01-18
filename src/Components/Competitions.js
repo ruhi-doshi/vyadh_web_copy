@@ -109,7 +109,7 @@ const Competitions = () => {
         <CompetitionCard
           frontImage="templates/front4.jpg"
           backImage="templates/back4.jpg"
-          link="/irc"
+          link="/urc"
           altText="Competition 4"
         />
       </div>

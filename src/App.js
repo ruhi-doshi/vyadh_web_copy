@@ -7,6 +7,7 @@ import ContactUsPage from './Pages/ContactUsPage';
 import IRC from './Components/IRC';
 import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
+import URC from './Components/URC'
 
 // import Loader from './Components/loader/Loader';
 
@@ -39,6 +40,7 @@ function App() {
                 <Route path="/board" element={<BoardPage />} />
                 <Route path="/contactus" element={<ContactUsPage />} />
                 <Route path="/irc" element={<IRC/>} />
+                <Route path="/urc" element={<URC/>} />
                 
 
             </Routes>

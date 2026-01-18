@@ -110,7 +110,7 @@ const ImageSlider = () => {
   return (
     <div className="homepage mt-[-50]">
       {/* Logo added on the top-left */}
-      <img src={Vyadh} alt="Vyadh Logo" className="logo-top-left" />
+      <img src={Vyadh} alt="Vyadh Logo" className="logo-top-left" loading='lazy'/>
 
       <div 
         className="background-image" 
@@ -125,7 +125,7 @@ const ImageSlider = () => {
           {content.map((item, index) => (
             <div key={index} className={`slide ${index === 0 ? 'first-slide' : ''}`}>
               <div className="image-container">
-                <img src={item.carouselImage} alt={`Carousel ${index + 1}`} />
+                <img src={item.carouselImage} alt={`Carousel ${index + 1}`} loading='lazy'/>
               </div>
             </div>
           ))}

@@ -45,7 +45,7 @@ const Footer = () => {
                     <a href="https://linkedin.com"><i className="fab fa-linkedin"></i></a>
                    <a href="https://instagram.com"><i className="fab fa-instagram"></i></a>
                 </div>
-                <img src={VIT} alt="VIT Logo" className="w-200 h-50 mx-auto md:mx-0" />
+                <img src={VIT} alt="VIT Logo" className="w-200 h-50 mx-auto md:mx-0" loading="lazy"/>
             </div>
 
             {/* Website Links Section */}
@@ -68,7 +68,7 @@ const Footer = () => {
                         <a href="/contactus" className="text-gray-400 hover:text-white">Contact Us</a>
                     </li>
                 </ul>
-                <img src={Vyadh} alt="Vyadh Logo" className="w-200 h-40 mx-auto md:mx-0" />
+                <img src={Vyadh} alt="Vyadh Logo" className="w-200 h-40 mx-auto md:mx-0" loading="lazy"/>
             </div>
 
             {/* Address Section */}
@@ -80,7 +80,7 @@ const Footer = () => {
                     Katpadi, Vellore, <br />
                     Tamil Nadu 632014
                 </address>
-                <img src={SEDS} alt="SEDS Logo" className="w-200 mt-12 h-40 mx-auto md:mx-0" />
+                <img src={SEDS} alt="SEDS Logo" className="w-200 mt-12 h-40 mx-auto md:mx-0" loading="lazy"/>
             </div>
 
         </footer>

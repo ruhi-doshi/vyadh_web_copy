@@ -56,7 +56,7 @@ const Sponsers = () => {
         {sponsors.map((sponsor, index) => (
           <a key={index} href={sponsor.href} target="_blank" rel="noopener noreferrer">
             <figure className="size-[40vw] bg-white rounded-[4vw] flex justify-center items-center md:size-[14.9vw] md:rounded-[1vw] sponsor-card">
-              <img src={sponsor.imgSrc} alt={sponsor.altText} />
+              <img src={sponsor.imgSrc} alt={sponsor.altText} loading="lazy"/>
             </figure>
           </a>
         ))}

@@ -27,10 +27,10 @@ const Board = () => {
       {/* card 1 */}
     <div className="wrapper">
       <div className="card front-face">
-        <img src={Dalton} alt=" " />
+        <img src={Dalton} alt=" " loading='lazy'/>
       </div>
       <div className="card back-face">
-        <img src={Dalton} alt="Back" />
+        <img src={Dalton} alt="Back" loading='lazy' />
         
         <div className="info">
           <div className="title text-sm pt-8">"Guided by vision, we master the cosmos"</div>
@@ -49,11 +49,11 @@ const Board = () => {
   {/* card 2 */}
     <div className="wrapper">
     <div className="card front-face">
-      <img src={Tanmay} alt=" " />
+      <img src={Tanmay} alt=" " loading='lazy' />
        
     </div>
     <div className="card back-face">
-      <img src={Tanmay} alt="Back" />
+      <img src={Tanmay} alt="Back" loading='lazy' />
       
       <div className="info">
         <div className="title text-sm pt-8">"United, we transform challenges into victories"</div>
@@ -72,10 +72,10 @@ const Board = () => {
   {/* card 3 */}
   <div className="wrapper">
     <div className="card front-face">
-      <img src={Abiram} alt=" " />
+      <img src={Abiram} alt=" " loading='lazy' />
     </div>
     <div className="card back-face">
-      <img src={Abiram} alt="Back" />
+      <img src={Abiram} alt="Back" loading='lazy' />
       
       <div className="info">
         <div className="title text-sm pt-8">"Every move blends innovation with execution"</div>
@@ -94,10 +94,10 @@ const Board = () => {
   {/* card 4 */}
   <div className="wrapper">
     <div className="card front-face">
-      <img src={Sarthak} alt=" " />
+      <img src={Sarthak} alt=" " loading='lazy' />
     </div>
     <div className="card back-face">
-      <img src={Sarthak} alt="Back" />
+      <img src={Sarthak} alt="Back" loading='lazy' />
       
       <div className="info">
         <div className="title text-sm pt-8">"Each gear, each mechanism, brings us closer to success"
@@ -116,10 +116,10 @@ const Board = () => {
 {/* card 5 */}
 <div className="wrapper">
     <div className="card front-face">
-      <img src={Jishnu} alt=" " />
+      <img src={Jishnu} alt=" " loading='lazy' />
     </div>
     <div className="card back-face">
-      <img src={Jishnu} alt="Back" />
+      <img src={Jishnu} alt="Back" loading='lazy' />
       
       <div className="info">
         <div className="title text-sm pt-8">"Enabling machines to reason, act, and discover"</div>
@@ -137,10 +137,10 @@ const Board = () => {
 {/* card 6 */}
 <div className="wrapper">
     <div className="card front-face">
-      <img src={Rishit} alt=" " />
+      <img src={Rishit} alt=" " loading='lazy' />
     </div>
     <div className="card back-face">
-      <img src={Rishit} alt="Back" />
+      <img src={Rishit} alt="Back" loading='lazy' />
       
       <div className="info">
         <div className="title text-sm pt-8">"Programming the journey to the stars"</div>
@@ -159,10 +159,10 @@ const Board = () => {
 {/* card 7 */}
 <div className="wrapper">
     <div className="card front-face">
-      <img src={Spoorthi} alt=" " />
+      <img src={Spoorthi} alt=" " loading='lazy' />
     </div>
     <div className="card back-face">
-      <img src={Spoorthi} alt="Back" />
+      <img src={Spoorthi} alt="Back" loading='lazy' />
       
       <div className="info">
         <div className="title text-sm pt-8">"Illuminating the way to discovery"</div>
@@ -181,10 +181,10 @@ const Board = () => {
 {/* card 8 */}
 <div className="wrapper">
     <div className="card front-face">
-      <img src={Meenakshi} alt=" " />
+      <img src={Meenakshi} alt=" " loading='lazy'/>
     </div>
     <div className="card back-face">
-      <img src={Meenakshi} alt="Back" />
+      <img src={Meenakshi} alt="Back" loading='lazy'/>
       
       <div className="info">
         <div className="title text-sm pt-8">"Data and discovery lie at the core of our mission"</div>
@@ -200,10 +200,10 @@ const Board = () => {
     {/* card 9 */}
 <div className="wrapper">
     <div className="card front-face">
-      <img src={Anirudh} alt=" " />
+      <img src={Anirudh} alt=" " loading='lazy'/>
     </div>
     <div className="card back-face">
-      <img src={Anirudh} alt="Back" />
+      <img src={Anirudh} alt="Back" loading='lazy'/>
       
       <div className="info">
         <div className="title text-sm pt-8">"Teamwork is the cornerstone of our cosmic achievements"</div>
@@ -221,10 +221,10 @@ const Board = () => {
   {/* card 10 */}
 <div className="wrapper">
     <div className="card front-face">
-      <img src={Raghav} alt=" " />
+      <img src={Raghav} alt=" " loading='lazy'/>
     </div>
     <div className="card back-face">
-      <img src={Raghav} alt="Back" />
+      <img src={Raghav} alt="Back"loading='lazy' />
       
       <div className="info">
         <div className="title text-sm pt-8">"Collaboration is the foundation of our stellar success"</div>

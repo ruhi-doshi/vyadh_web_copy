@@ -28,14 +28,13 @@ const Board = () => {
    <h1 className="heading"> </h1>
     </div>
 
-
       {/* card 1 */}
     <div className="wrapper">
       <div className="card front-face">
-        <img src={ShreemayFront} alt=" " />
+        <img src={ShreemayFront} alt=" " loading="lazy" />
       </div>
       <div className="card back-face">
-        <img src={Shreemay} alt="Back" />
+        <img src={Shreemay} alt="Back" loading="lazy" />
         
         { <div className="info">
           <div className="title text-sm pt-8">"Guiding our mission beyond the stars,one vision at a time"</div>
@@ -54,11 +53,11 @@ const Board = () => {
   {/* card 2 */}
     <div className="wrapper">
     <div className="card front-face">
-      <img src={IshaanFront} alt=" " />
+      <img src={IshaanFront} alt=" " loading="lazy" />
        
     </div>
     <div className="card back-face">
-      <img src={Ishaan} alt="Back" />
+      <img src={Ishaan} alt="Back" loading='lazy' />
       
       { <div className="info">
         <div className="title text-sm  pt-8">"Empowered by trust,driven by purpose,we achieve greatness"</div>
@@ -76,10 +75,10 @@ const Board = () => {
 {/* card 4 */}
 <div className="wrapper">
     <div className="card front-face">
-      <img src={DhruvFront} alt=" " />
+      <img src={DhruvFront} alt=" " loading='lazy' />
     </div>
     <div className="card back-face">
-      <img src={Dhruv} alt="Back" />
+      <img src={Dhruv} alt="Back" loading='lazy' />
       
       <div className="info">
         <div className="title text-sm pt-8">"With each connection,we channel the power to explore new worlds"</div>
@@ -96,10 +95,10 @@ const Board = () => {
   {/* card 3 */}
   <div className="wrapper">
     <div className="card front-face">
-      <img src={DikshaFront} alt=" " />
+      <img src={DikshaFront} alt=" " loading='lazy' />
     </div>
     <div className="card back-face">
-      <img src={Diksha} alt="Back" />
+      <img src={Diksha} alt="Back" loading='lazy' />
       
       <div className="info">
         <div className="title text-sm pt-8">"Orchestrating every detail,we turn complexity into triumph"</div>
@@ -120,10 +119,10 @@ const Board = () => {
 {/* card 5 */}
 <div className="wrapper">
     <div className="card front-face">
-      <img src={JatinFront} alt=" " />
+      <img src={JatinFront} alt=" " loading='lazy' />
     </div>
     <div className="card back-face">
-      <img src={Jatin} alt="Back" />
+      <img src={Jatin} alt="Back" loading='lazy' />
       
       <div className="info">
         <div className="title text-sm pt-8">"Engineering the future,where every component is a masterpiece of innovation"</div>
@@ -141,10 +140,10 @@ const Board = () => {
 {/* card 6 */}
 <div className="wrapper">
     <div className="card front-face">
-      <img src={SarthakFront} alt=" " />
+      <img src={SarthakFront} alt=" " loading='lazy' />
     </div>
     <div className="card back-face">
-      <img src={Sarthak} alt="Back" />
+      <img src={Sarthak} alt="Back" loading='lazy' />
       
       <div className="info">
         <div className="title text-sm pt-8">"From Mars to beyond, our journey in astrobiology shapes the future"</div>
@@ -163,10 +162,10 @@ const Board = () => {
 {/* card 7 */}
 <div className="wrapper">
     <div className="card front-face">
-      <img src={YashaswiniFront} alt=" " />
+      <img src={YashaswiniFront} alt=" " loading='lazy' />
     </div>
     <div className="card back-face">
-      <img src={Yashaswini} alt="Back" />
+      <img src={Yashaswini} alt="Back" loading='lazy' />
       
       <div className="info">
         <div className="title text-sm pt-8">"Autonomy in action,fueled by relentless innovation and collaborative genius"</div>
@@ -185,10 +184,10 @@ const Board = () => {
 {/* card 8 */}
 <div className="wrapper">
     <div className="card front-face">
-      <img src={ArvindFront} alt=" " />
+      <img src={ArvindFront} alt=" " loading='lazy' />
     </div>
     <div className="card back-face">
-      <img src={Arvind} alt="Back" />
+      <img src={Arvind} alt="Back" loading='lazy' />
       
       <div className="info">
         <div className="title text-sm pt-8">"With each connection, we electrify our mission and illuminate our path"</div>

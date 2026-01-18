@@ -53,7 +53,7 @@ const Domains = () => {
         {/* Management */}
         <div className="wrapper">
           <div className="card front-face">
-            <img src={Management} alt="Management" className="card-image" />
+            <img src={Management} alt="Management" className="card-image" loading='lazy'/>
             <div className="title">Management</div>
           </div>
           <div className="card back-face">
@@ -71,7 +71,7 @@ const Domains = () => {
         {/* Astrobiology */}
         <div className="wrapper">
           <div className="card front-face">
-            <img src={Astrobiology} alt="Astrobiology" className="card-image" />
+            <img src={Astrobiology} alt="Astrobiology" className="card-image" loading='lazy'/>
             <div className="title">Astrobiology</div>
           </div>
           <div className="card back-face">
@@ -89,7 +89,7 @@ const Domains = () => {
         {/* GCS */}
         <div className="wrapper">
           <div className="card front-face">
-            <img src={GCSImage} alt="GCS" className="card-image" />
+            <img src={GCSImage} alt="GCS" className="card-image" loading='lazy'/>
             <div className="title">GCS</div>
           </div>
           <div className="card back-face">
@@ -107,7 +107,7 @@ const Domains = () => {
         {/* Autonomous */}
         <div className="wrapper">
           <div className="card front-face">
-            <img src={Autonomous} alt="Autonomous" className="card-image" />
+            <img src={Autonomous} alt="Autonomous" className="card-image" loading='lazy'/>
             <div className="title">Autonomous</div>
           </div>
           <div className="card back-face">
@@ -125,7 +125,7 @@ const Domains = () => {
         {/* Electrical */}
         <div className="wrapper">
           <div className="card front-face">
-            <img src={Electrical} alt="Electrical" className="card-image" />
+            <img src={Electrical} alt="Electrical" className="card-image" loading='lazy'/>
             <div className="title">Electrical</div>
           </div>
           <div className="card back-face">
@@ -143,7 +143,7 @@ const Domains = () => {
         {/* Mechanical */}
         <div className="wrapper">
           <div className="card front-face">
-            <img src={Mechanical} alt="Mechanical" className="card-image" />
+            <img src={Mechanical} alt="Mechanical" className="card-image" loading='lazy'/>
             <div className="title">Mechanical</div>
           </div>
           <div className="card back-face">
@@ -161,7 +161,7 @@ const Domains = () => {
         {/* RoboticArm */}
         <div className="wrapper">
           <div className="card front-face">
-            <img src={RoboticArm} alt="Electrical" className="card-image" />
+            <img src={RoboticArm} alt="Electrical" className="card-image" loading='lazy'/>
             <div className="title">Robotic Arm</div>
           </div>
           <div className="card back-face">
