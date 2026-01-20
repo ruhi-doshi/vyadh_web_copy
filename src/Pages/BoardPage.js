@@ -4,26 +4,26 @@ import Board from "../Components/Board";
 import Board22_23 from "../Components/Board22_23";
 import Board24_25 from "../Components/Board24_25";
 import Board25_26 from "../Components/Board25_26";
-import "./BoardPage.css";
+import styles from "./BoardPage.module.css";
 
 const TimelineBar = ({ boards, selectedBoard, setSelectedBoard }) => {
     return (
-        <div className="timeline-section">
-            <div className="timeline-content">
-                <div className="timeline-header">
-                    <h1 className="timeline-title">TEAM LEADERSHIP</h1>
+        <div className={styles.timelineSection}>
+            <div className={styles.timelineContent}>
+                <div className={styles.timelineHeader}>
+                    <h1 className={styles.timelineTitle}>TEAM LEADERSHIP</h1>
                 </div>
 
                 {/* Timeline slider */}
-                <div className="timeline-slider-wrapper">
+                <div className={styles.timelineSliderWrapper}>
 
-                    <div className="timeline-items">
+                    <div className={styles.timelineItems}>
                         {boards.map((board, index) => {
                             const isSelected = selectedBoard === board.id;
                             return (
                                 <motion.div
                                     key={board.id}
-                                    className={`timeline-item ${isSelected ? "active" : ""}`}
+                                    className={`${styles.timelineItem} ${isSelected ? styles.active : ""}`}
                                     onClick={() => setSelectedBoard(board.id)}
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
@@ -35,10 +35,10 @@ const TimelineBar = ({ boards, selectedBoard, setSelectedBoard }) => {
                                     }}
                                 >
                                     {/* Dot */}
-                                    <div className="timeline-dot">
+                                    <div className={styles.timelineDot}>
                                         {isSelected && (
                                             <motion.div
-                                                className="dot-pulse"
+                                                className={styles.dotPulse}
                                                 animate={{
                                                     scale: [1, 1.5],
                                                     opacity: [1, 0],
@@ -53,16 +53,16 @@ const TimelineBar = ({ boards, selectedBoard, setSelectedBoard }) => {
 
                                     {/* Label */}
                                     <motion.div
-                                        className="timeline-label"
+                                        className={styles.timelineLabel}
                                         animate={{
                                             y: isSelected ? -10 : 0,
                                         }}
                                         transition={{ duration: 0.3 }}
                                     >
-                                        <div className="label-year">
+                                        <div className={styles.labelYear}>
                                             {board.year}
                                         </div>
-                                        <div className="label-text">
+                                        <div className={styles.labelText}>
                                             {board.label}
                                         </div>
                                     </motion.div>
@@ -92,7 +92,7 @@ const ContentDisplay = ({ selectedBoard, boards }) => {
     };
 
     return (
-        <div className="content-section">
+        <div className={styles.contentSection}>
             <AnimatePresence mode="wait">
                 <motion.div
                     key={selectedBoard}

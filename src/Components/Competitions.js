@@ -55,6 +55,7 @@ const Competitions = () => {
           background: -webkit-linear-gradient(white, #03002A);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
+          font-family: sans-serif;
         }
 
         @media (min-width: 768px) {

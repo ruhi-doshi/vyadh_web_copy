@@ -1,24 +1,25 @@
 /* ========== TIMELINE SECTION ========== */
-.timeline-section {
+.timelineSection {
   position: relative;
   width: 100%;
   padding: 80px 20px;
-  border-bottom: 1px solid rgba(102, 126, 234, 0.1);
+  margin-bottom: 0;
+  border-bottom: 1px solid rgba(102, 126, 246, 0.1);
 }
 
-.timeline-content {
+.timelineContent {
   max-width: 100%;
-  margin: 0 auto;
+  margin: 10px auto;
   position: relative;
   z-index: 1;
 }
 
-.timeline-header {
+.timelineHeader {
   text-align: center;
-  margin-bottom: 80px;
+  /* margin-bottom: 80px; */
 }
 
-.timeline-title {
+.timelineTitle {
   font-weight: bold;
   margin: 20px 0;
   background: -webkit-linear-gradient(white, #03002A);
@@ -29,13 +30,13 @@
 }
 
 /* ========== TIMELINE SLIDER ========== */
-.timeline-slider-wrapper {
+.timelineSliderWrapper {
   position: relative;
   padding: 50px 20px;
-  margin-bottom: 40px;
+  /* margin-bottom: 40px; */
 }
 
-.timeline-items {
+.timelineItems {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -47,7 +48,7 @@
   margin: 0 auto;
 }
 
-.timeline-item {
+.timelineItem {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -57,7 +58,7 @@
 }
 
 /* Timeline Dot */
-.timeline-dot {
+.timelineDot {
   width: 16px;
   height: 16px;
   border-radius: 50%;
@@ -67,7 +68,7 @@
   transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-.timeline-item.active .timeline-dot {
+.timelineItem.active .timelineDot {
   width: 24px;
   height: 24px;
   background: radial-gradient(circle, rgba(102, 126, 234, 0.6), rgba(102, 126, 234, 0.3));
@@ -75,20 +76,29 @@
   box-shadow: 0 0 20px rgba(102, 126, 234, 0.5), inset 0 0 10px rgba(102, 126, 234, 0.2);
 }
 
-.timeline-item:hover .timeline-dot {
+.timelineItem:hover .timelineDot {
   border-color: #667eea;
   background: rgba(102, 126, 234, 0.3);
   transform: scale(1.2);
 }
 
+.active .timelineDot {
+  width: 24px;
+  height: 24px;
+  background: radial-gradient(circle, rgba(102, 126, 234, 0.6), rgba(102, 126, 234, 0.3));
+  border: 2px solid #667eea;
+  box-shadow: 0 0 20px rgba(102, 126, 234, 0.5), inset 0 0 10px rgba(102, 126, 234, 0.2);
+}
+
+
 /* Timeline Label */
-.timeline-label {
+.timelineLabel {
   text-align: center;
   transition: all 0.3s ease;
   white-space: nowrap;
 }
 
-.label-year {
+.labelYear {
   font-size: 0.9rem;
   color: rgba(102, 126, 234, 0.6);
   font-weight: 600;
@@ -97,12 +107,12 @@
   margin-bottom: 8px;
 }
 
-.timeline-item.active .label-year {
+.active .labelYear {
   color: #667eea;
   font-size: 0.95rem;
 }
 
-.label-text {
+.labelText {
   font-size: 1.1rem;
   color: rgba(255, 255, 255, 0.7);
   font-weight: 600;
@@ -110,168 +120,135 @@
   transition: all 0.3s ease;
 }
 
-.timeline-item.active .label-text {
+.active .labelText {
   color: white;
   font-weight: 700;
 }
 
-.timeline-item:hover .label-text {
+.timelineItem:hover .labelText {
   color: rgba(255, 255, 255, 0.95);
 }
 
 /* ========== CONTENT SECTION ========== */
-.content-section {
+.contentSection {
   position: relative;
   z-index: 5;
   padding: 60px 20px;
+  margin: 0;
   min-height: auto;
   display: flex;
   justify-content: center;
   align-items: flex-start;
 }
 
-.content-section > div {
+.contentSection > div {
   width: 100%;
   display: flex;
   justify-content: center;
 }
 
-/* ========== BOARD CARDS CENTERING ========== */
-main.container {
-  display: flex !important;
-  justify-content: center !important;
-  align-items: flex-start !important;
-  flex-wrap: wrap !important;
-  gap: 30px !important;
-  max-width: 1300px !important;
-  margin: 0 auto !important;
-  padding: 0 20px !important;
-  grid-template-columns: unset !important;
-}
-
-.wrapper {
-  flex: 0 1 calc(33.333% - 20px) !important;
-  max-width: 320px !important;
-}
-
 /* ========== RESPONSIVE DESIGN ========== */
 
 @media (max-width: 1200px) {
-  .timeline-title {
+  .timelineTitle {
     font-size: 3.5rem;
     letter-spacing: 6px;
   }
 
-  .timeline-items {
+  .timelineItems {
     gap: 40px;
-  }
-
-  .wrapper {
-    flex: 0 1 calc(50% - 15px) !important;
-    max-width: 300px !important;
   }
 }
 
 @media (max-width: 768px) {
-  .timeline-section {
+  .timelineSection {
     padding: 60px 15px;
+    margin: 0;
   }
 
-  .timeline-title {
+  .timelineTitle {
     font-size: 2.5rem;
     letter-spacing: 4px;
     margin-bottom: 20px;
   }
 
-  .timeline-header {
+  .timelineHeader {
     margin-bottom: 50px;
   }
 
-  .timeline-slider-wrapper {
+  .timelineSliderWrapper {
     padding: 30px 10px;
   }
 
-  .timeline-items {
+  .timelineItems {
     gap: 30px;
     flex-wrap: wrap;
   }
 
-  .timeline-item {
+  .timelineItem {
     gap: 12px;
   }
 
-  .label-year {
+  .labelYear {
     font-size: 0.8rem;
     letter-spacing: 1.5px;
   }
 
-  .label-text {
+  .labelText {
     font-size: 1rem;
     letter-spacing: 0.5px;
   }
 
-  .content-section {
+  .contentSection {
     padding: 40px 15px;
-  }
-
-  .wrapper {
-    flex: 0 1 calc(50% - 15px) !important;
-    max-width: 280px !important;
   }
 }
 
 @media (max-width: 480px) {
-  .timeline-section {
+  .timelineSection {
     padding: 40px 10px;
+    margin: 0;
   }
 
-  .timeline-title {
+  .timelineTitle {
     font-size: 1.8rem;
     letter-spacing: 2px;
     margin-bottom: 15px;
   }
 
-  .timeline-header {
+  .timelineHeader {
     margin-bottom: 30px;
   }
 
-  .timeline-slider-wrapper {
+  .timelineSliderWrapper {
     padding: 25px 5px;
   }
 
-  .timeline-items {
+  .timelineItems {
     gap: 20px;
     flex-direction: column;
   }
 
-  .timeline-connector-line {
-    display: none;
-  }
-
-  .timeline-dot {
+  .timelineDot {
     width: 14px;
     height: 14px;
   }
 
-  .timeline-item.active .timeline-dot {
+  .active .timelineDot {
     width: 20px;
     height: 20px;
   }
 
-  .label-year {
+  .labelYear {
     font-size: 0.75rem;
   }
 
-  .label-text {
+  .labelText {
     font-size: 0.95rem;
   }
 
-  .content-section {
+  .contentSection {
     padding: 30px 10px;
   }
-
-  .wrapper {
-    flex: 0 1 100% !important;
-    max-width: 280px !important;
-  }
 }
+

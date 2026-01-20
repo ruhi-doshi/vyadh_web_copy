@@ -276,8 +276,8 @@ const Footer = () => {
 
  {/* Useful Links Section */}
  <div className="space-y-3 text-center md:text-left">
- <h6 className="text-xl font-semibold text-white">Useful Links</h6>
- <ul className="space-y-2 text-gray-400">
+ <h6 className="text-xl font-semibold text-white font-lobster">Useful Links</h6>
+ <ul className="space-y-2 text-gray-400 font-jost">
  <li><a href="/" className="hover:text-gray-100 transition">Home</a></li>
  <li><a href="/achievementsandcompetitions" className="hover:text-gray-100 transition">Achievements</a></li>
  <li><a href="/achievementsandcompetitions" className="hover:text-gray-100 transition">Competitions</a></li>
@@ -288,15 +288,15 @@ const Footer = () => {
 
  {/* Subscribe Section */}
  <div className="space-y-3 text-center md:text-left">
- <h6 className="text-xl font-semibold text-white">Subscribe</h6>
- <p className="text-gray-400">
+ <h6 className="text-xl font-semibold text-white font-lobster">Subscribe</h6>
+ <p className="text-gray-400 font-jost">
  Don't miss to subscribe to our new feeds, kindly fill the form below.
  </p>
  <form className="flex items-center space-x-2">
  <input
  type="email"
  placeholder="Email Address"
- className="px-4 py-2 rounded text-gray-800 w-full focus:outline-none"
+ className="px-4 py-2 rounded text-gray-800 w-full focus:outline-none font-jost"
  />
  <button
  type="submit"
@@ -309,15 +309,15 @@ const Footer = () => {
 
  {/* Contact Address Section */}
  <div className="space-y-3 text-center md:text-left">
- <h6 className="text-xl font-semibold text-white">Contact Address</h6>
- <address className="not-italic text-gray-400">
+ <h6 className="text-xl font-semibold text-white font-lobster">Contact Address</h6>
+ <address className="not-italic text-gray-400 font-jost">
  VIT, Vellore Campus,<br />
  Tiruvalam Rd, Katpadi,<br />
  Vellore, Tamil Nadu 632014,<br />
  <br/>
 
- Captain : +917540012837,<br />
- Vice Captain : +919354384597
+ Captain : +919818861205,<br />
+ Vice Captain : +918016009281
  
  </address>
  </div>

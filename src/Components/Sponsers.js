@@ -32,7 +32,7 @@ const sponsors = [
     },
     { href: "https://www.ansys.com/", imgSrc: Ansys, altText: "Ansys Logo" },
     { href: "https://dreampolymers.com/", imgSrc: DP, altText: "DP Logo" },
-    { href: "https://uis.edu/", imgSrc: UIS, altText: "UIS Logo" },
+    { href: "mailto:Uissre@gmail.com", imgSrc: UIS, altText: "UIS Logo" },
 ];
 
 const Sponsors = () => {

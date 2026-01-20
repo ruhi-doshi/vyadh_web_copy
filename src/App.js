@@ -1,5 +1,4 @@
 import { Routes, Route } from 'react-router-dom';
-import { useState, useEffect } from 'react';
 import Home from './Pages/Home';
 import AchComp from './Pages/AchComp';
 import BoardPage from './Pages/BoardPage';

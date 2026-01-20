@@ -134,7 +134,7 @@ class Carousel extends Component {
                     .carousel-title {
                         text-align: center;
                         color: #FFF;
-                        font-family: 'Lato', sans-serif;
+                        font-family: sans-serif;
                         font-weight: 300;
                         padding: 20px 20px 20px 20px;
                     }
@@ -142,7 +142,7 @@ class Carousel extends Component {
                     .achievements-heading {
                         font-size: 50px; /* Adjust to match the specified size */
                         font-weight: bold; /* Ensure the text is bold */
-                        letter-spacing: 10px;
+                        letter-spacing: 5px;
                         background: -webkit-linear-gradient(white, #03002A);
                         -webkit-background-clip: text;
                         -webkit-text-fill-color: transparent;

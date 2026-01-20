@@ -22,7 +22,7 @@ const Navbar = () => {
                     id="menu"
                     className={`transition-[opacity,margin] duration-300 ease-in-out ${
                         show ? "opacity-100 block" : "opacity-0 hidden"
-                    } absolute top-[4vw] right-[3vw] bg-vyadhColor-100 text-white rounded-md w-fit p-[2vw] z-50`}
+                    } absolute top-[4vw] right-[3vw] bg-vyadhColor-100 text-white rounded-md w-fit p-[2vw] z-50 font-jost`}
                     aria-labelledby="trigger"
                 >
                     <li>
@@ -53,7 +53,7 @@ const Navbar = () => {
                         )}
                     </li>
                     <li>
-                        <a href="/achievementsandcompetitions#ach" className="hover:text-blue-400 hover:glow">Achievements</a>
+                        <a href="/achievementsandcompetitions#achievements" className="hover:text-blue-400 hover:glow">Achievements</a>
                     </li>
                     <li>
                         <a href="/board" className="hover:text-blue-400 hover:glow">Board</a>
@@ -66,7 +66,7 @@ const Navbar = () => {
 
             {/* For medium and large screens */}
             <nav className="hidden md:block absolute top-0 right-0 z-50 mt-[calc(2vw-10px)] mr-[calc(2vw-5px)] w-[calc(70%-5px)] rounded-xl px-[calc(2vw-5px)] py-[calc(0.8vw-10px)] bg-vyadhColor-100 text-white drop-shadow-xl ">
-                <ul className="md:flex justify-around text-[1.3vw]">
+                <ul className="md:flex justify-around text-[1.3vw] font-jost">
                     <li>
                         <a href="/" className="hover:text-blue-400 hover:glow">Home</a>
                     </li>
@@ -97,7 +97,7 @@ const Navbar = () => {
                         )}
                     </li>
                     <li>
-                        <a href="/achievementsandcompetitions#achs" className="hover:text-blue-400 hover:glow">Achievements</a>
+                        <a href="/achievementsandcompetitions#achievements" className="hover:text-blue-400 hover:glow">Achievements</a>
                     </li>
                     <li>
                         <a href="/board" className="hover:text-blue-400 hover:glow">Board</a>

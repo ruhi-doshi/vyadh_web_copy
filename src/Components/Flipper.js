@@ -44,7 +44,7 @@ const Col = styled.div``;
 
 const Title = styled.h1`
   color: #fff;
-  font-family: 'Monoton', cursive;
+  font-family: sans-serif;
   font-size: 70px;
   text-shadow: 2px 2px 10px #1D2671, 4px 4px 15px #C33764;
 `;
@@ -91,7 +91,7 @@ const Front = styled(CardSide)`
   text-align: center;
   line-height: 200px;
   font-size: 80px;
-  font-family: 'Faster One', cursive;
+  font-family: sans-serif;
   background: #C33764;
   background: -webkit-linear-gradient(45deg, #1D2671 10%, #C33764 80%);
   background: linear-gradient(45deg, #1D2671 10%, #C33764 80%);

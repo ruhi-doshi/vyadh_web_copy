@@ -41,6 +41,21 @@ const ImageSlider = () => {
       heading: 'Unleashing the Potential of Our Planets Neighbor.',
       carouselImage: '/templates/carousel5.png',
     },
+    {
+      bgImage: '/templates/bg6.jpeg',
+      heading: 'TEAM VYADH',
+      carouselImage: '/templates/carousel6.jpeg',
+    },
+    {
+      bgImage: '/templates/bg7.jpeg',
+      heading: 'VYADH ROVER IN ACTION',
+      carouselImage: '/templates/carousel7.jpeg',
+    },
+    {
+      bgImage: '/templates/bg8.jpeg',
+      heading: 'MARS EXPLORATION MISSION',
+      carouselImage: '/templates/carousel4.png',
+    },
   ];
 
   const resetTimer = useCallback(() => {

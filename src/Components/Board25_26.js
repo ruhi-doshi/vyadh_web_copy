@@ -1,4 +1,4 @@
-import "./Board25_26.css";
+import styles from "./Board.module.css";
 
 import Aarushi from "../Assets/Aarushi.jpeg";
 import Afham from "../Assets/Afham.jpeg";
@@ -21,7 +21,7 @@ const board = [
         role: "Vice Captain",
         name: "Afham Faiyaz Ahmed",
         image: Afham,
-        quote: "Stars don’t ask permission to shine.\n Neither should you.",
+        quote: "Stars don't ask permission to shine.\n Neither should you.",
         github: "https://github.com/a-fham",
         linkedin: "https://www.linkedin.com/in/afhamahmad/",
     },
@@ -67,58 +67,58 @@ const board = [
     },
 ];
 
-const Board = () => {
+const Board25_26 = () => {
     return (
         <>
-            <main className="container">
+            <main className={styles.container}>
                 {board.map((member, index) => (
-                    <div className="wrapper" key={index}>
-                        <div className="card front-face">
+                    <div className={styles.wrapper} key={index}>
+                        <div className={`${styles.card} ${styles.frontFace}`}>
                             <img
                                 src={member.image}
                                 alt={member.name}
                                 loading="lazy"
                             />
-                            <div className="name-overlay">
-                                <div className="member-name">
+                            <div className={styles.nameOverlay}>
+                                <div className={styles.memberName}>
                                     {member.name}
                                 </div>
                                 {member.role && (
-                                    <div className="member-role">
+                                    <div className={styles.memberRole}>
                                         {member.role}
                                     </div>
                                 )}
                             </div>
                         </div>
-                        <div className="card back-face">
+                        <div className={`${styles.card} ${styles.backFace}`}>
                             <img
                                 src={member.image}
                                 alt={`Portrait of ${member.name}`}
                                 loading="lazy"
                             />
-                            <div className="info">
-                                <div className="title text-sm pt-8">
+                            <div className={styles.info}>
+                                <div className={`${styles.title} ${styles.textSm}`}>
                                     {`"${member.quote}"`}
                                 </div>
                             </div>
-                            <ul>
+                            <ul className={styles.socialLinks}>
                                 {member.github && (
-                                    <a href={member.github}>
+                                    <a href={member.github} className={styles.socialLink}>
                                         <i className="fab fa-github"></i>
                                     </a>
                                 )}
                                 {member.linkedin && (
-                                    <a href={member.linkedin}>
+                                    <a href={member.linkedin} className={styles.socialLink}>
                                         <i className="fab fa-linkedin"></i>
                                     </a>
                                 )}
                                 {member.instagram && (
-                                    <a href={member.instagram}>
+                                    <a href={member.instagram} className={styles.socialLink}>
                                         <i className="fab fa-instagram"></i>
                                     </a>
                                 )}
                                 {member.email && (
-                                    <a href={member.email}>
+                                    <a href={member.email} className={styles.socialLink}>
                                         <i className="fas fa-envelope"></i>
                                     </a>
                                 )}
@@ -131,4 +131,4 @@ const Board = () => {
     );
 };
 
-export default Board;
+export default Board25_26;

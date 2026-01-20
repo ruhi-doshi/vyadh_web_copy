@@ -159,8 +159,8 @@ useEffect(() => {
                     backgroundImage: 'linear-gradient(180deg, #4CA1AF 0%, #3d6a7a 33%, #334d5c 66%, #2C3E50 100%)',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
-                    fontFamily: "'Courier New', Courier, monospace",
-                    fontWeight: '1000',
+                    fontFamily: "sans-serif",
+                    fontWeight: '400',
                     filter: 'drop-shadow(0 4px 8px rgba(27, 38, 59, 0.5))'
         }}
 >
@@ -220,7 +220,7 @@ useEffect(() => {
                         loading="lazy"
                         className="w-16 h-16 object-contain"
                     />
-                    <h2 className="text-white text-3xl font-bold">
+                    <h2 className="text-white text-3xl font-bold font-lobster">
                         About SPROS
                     </h2>
                 </div>
@@ -235,7 +235,7 @@ useEffect(() => {
 
             {/* 2nd Section: Pie and Bar Charts */}
             <div className="bg-[#03002A] p-6 rounded-lg">
-                <h2 className="text-white text-3xl font-bold text-center mb-9">
+                <h2 className="text-white text-3xl font-bold text-center mb-9 font-lobster">
                     Visual Representation
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-12">
@@ -266,7 +266,7 @@ useEffect(() => {
             
             {/* 3rd Section: Dynamic Divs */}
             <div className="mb-32">
-                    <h2 className="text- #F0F8FF text-3xl font-bold text-center mb-9">
+                    <h2 className="text- #F0F8FF text-3xl font-bold text-center mb-9 font-lobster">
                     Competition Tasks
                     </h2>
                     <div className="max-w-6xl mx-auto px-4 space-y-16">

@@ -18,8 +18,8 @@ export default function App() {
                       backgroundImage: 'linear-gradient(180deg, #4CA1AF 0%, #3d6a7a 33%, #334d5c 66%, #2C3E50 100%)',
                       WebkitBackgroundClip: 'text',
                       WebkitTextFillColor: 'transparent',
-                      fontFamily: "'Courier New', Courier, monospace",
-                      fontWeight: '1000',
+                      fontFamily: "sans-serif",
+                      fontWeight: '400',
                       filter: 'drop-shadow(0 4px 8px rgba(27, 38, 59, 0.5))'
             }}
     >
@@ -34,7 +34,7 @@ export default function App() {
                         loading="lazy"
                         className="w-16 h-16 object-contain"
                     /> */}
-                    <h2 className="text-white text-3xl font-bold">
+                    <h2 className="text-white text-3xl font-bold font-lobster">
                         About URC
                     </h2>
                 </div>

@@ -25,7 +25,7 @@ const Achievements = ({ images }) => {
     <>
     <main className='w-full min-h-screen flex flex-col'>
     <div className="flex flex-col items-center bg-[#03002A] min-h-screen">
-      <h1 className="text-white text-center text-6xl font-bold mt-2">ACHIEVEMENTS</h1>
+      <h1 className="text-white text-center text-6xl font-bold mt-2 font-lobster">ACHIEVEMENTS</h1>
       <div className="relative flex justify-center items-center mt-16">
         <button 
           onClick={handlePrev} 
