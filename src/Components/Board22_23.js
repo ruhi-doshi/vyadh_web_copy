@@ -27,9 +27,6 @@ const Board = () => {
     <>
     
     <main className='container '>
-      <div className='container'>
-     <h1 className="heading"> </h1>
-    </div>
 
 
       {/* card 1 */}

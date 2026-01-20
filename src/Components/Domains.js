@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
 import './Domains.css';
-import GCSImage from "../Assets/gcs.JPG";
-import Autonomous from "../Assets/autonomous.JPG"; 
-import Mechanical from "../Assets/mechanical.JPG"; 
-import Management from "../Assets/management.JPG"; 
-import Electrical from "../Assets/electrical.JPG"; 
-import Astrobiology from "../Assets/astrobiology.JPG";
-import RoboticArm from "../Assets/roboticarm.JPG";
+import GCSImage from "../Assets/gcs.jpg";
+import Autonomous from "../Assets/autonomous.jpg"; 
+import Mechanical from "../Assets/mechanical.jpg"; 
+import Management from "../Assets/management.jpg"; 
+import Electrical from "../Assets/electrical.jpg"; 
+import Astrobiology from "../Assets/astrobiology.jpg";
+import RoboticArm from "../Assets/roboticarm.jpg";
 
 const Domains = () => {
   useEffect(() => {

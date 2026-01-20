@@ -1,136 +1,277 @@
-
-.board-page {
-  text-align: center;
-  margin-top: 250px;
+/* ========== TIMELINE SECTION ========== */
+.timeline-section {
+  position: relative;
+  width: 100%;
+  padding: 80px 20px;
+  border-bottom: 1px solid rgba(102, 126, 234, 0.1);
 }
 
-@media (max-width: 768px) {
-  .board-page {
-    margin-top: 150px; 
-  }
-}
-
-/* Switch container */
-.switch-container {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-  flex-wrap: wrap; 
-}
-
-@media (max-width: 768px) {
-  .switch-container {
-    justify-content: center; 
-    margin-bottom: 15px; 
-  }
-}
-
-
-.switch-div {
-  padding: 20px;
-  font-size: 26px;
-  background-color: #03002A; 
-  color: white;
-  align-items: center;
-  border-radius: 30px;
-  cursor: pointer;
-  margin: 10px 5px; 
-  width: 250px;
-  height: 80px;
-  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
+.timeline-content {
+  max-width: 100%;
+  margin: 0 auto;
   position: relative;
   z-index: 1;
 }
 
-@media (max-width: 1024px) {
-  .switch-div {
-    width: 220px; 
-    height: 70px; 
-    font-size: 24px;
-  }
+.timeline-header {
+  text-align: center;
+  margin-bottom: 80px;
 }
 
-@media (max-width: 768px) {
-  .switch-div {
-    width: 180px; 
-    height: 60px; 
-    font-size: 20px; 
-  }
+.timeline-title {
+  font-weight: bold;
+  margin: 20px 0;
+  background: -webkit-linear-gradient(white, #03002A);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  font-size: 5rem;
 }
 
-.switch-div.active {
-  background-color: #2F2882;
+/* ========== TIMELINE SLIDER ========== */
+.timeline-slider-wrapper {
+  position: relative;
+  padding: 50px 20px;
+  margin-bottom: 40px;
+}
+
+.timeline-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.timeline-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Timeline Dot */
+.timeline-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: rgba(102, 126, 234, 0.2);
+  border: 2px solid rgba(102, 126, 234, 0.4);
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.timeline-item.active .timeline-dot {
+  width: 24px;
+  height: 24px;
+  background: radial-gradient(circle, rgba(102, 126, 234, 0.6), rgba(102, 126, 234, 0.3));
+  border: 2px solid #667eea;
+  box-shadow: 0 0 20px rgba(102, 126, 234, 0.5), inset 0 0 10px rgba(102, 126, 234, 0.2);
+}
+
+.timeline-item:hover .timeline-dot {
+  border-color: #667eea;
+  background: rgba(102, 126, 234, 0.3);
+  transform: scale(1.2);
+}
+
+/* Timeline Label */
+.timeline-label {
+  text-align: center;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.label-year {
+  font-size: 0.9rem;
+  color: rgba(102, 126, 234, 0.6);
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.timeline-item.active .label-year {
+  color: #667eea;
+  font-size: 0.95rem;
+}
+
+.label-text {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.timeline-item.active .label-text {
   color: white;
-  font-size: 28px;
-  transform: scale(1.1);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  font-weight: 700;
 }
 
-@media (max-width: 1024px) {
-  .switch-div.active {
-    font-size: 26px; 
+.timeline-item:hover .label-text {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+/* ========== CONTENT SECTION ========== */
+.content-section {
+  position: relative;
+  z-index: 5;
+  padding: 60px 20px;
+  min-height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.content-section > div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* ========== BOARD CARDS CENTERING ========== */
+main.container {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: flex-start !important;
+  flex-wrap: wrap !important;
+  gap: 30px !important;
+  max-width: 1300px !important;
+  margin: 0 auto !important;
+  padding: 0 20px !important;
+  grid-template-columns: unset !important;
+}
+
+.wrapper {
+  flex: 0 1 calc(33.333% - 20px) !important;
+  max-width: 320px !important;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+
+@media (max-width: 1200px) {
+  .timeline-title {
+    font-size: 3.5rem;
+    letter-spacing: 6px;
+  }
+
+  .timeline-items {
+    gap: 40px;
+  }
+
+  .wrapper {
+    flex: 0 1 calc(50% - 15px) !important;
+    max-width: 300px !important;
   }
 }
 
 @media (max-width: 768px) {
-  .switch-div.active {
-    font-size: 22px; 
+  .timeline-section {
+    padding: 60px 15px;
+  }
+
+  .timeline-title {
+    font-size: 2.5rem;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+  }
+
+  .timeline-header {
+    margin-bottom: 50px;
+  }
+
+  .timeline-slider-wrapper {
+    padding: 30px 10px;
+  }
+
+  .timeline-items {
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  .timeline-item {
+    gap: 12px;
+  }
+
+  .label-year {
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
+  }
+
+  .label-text {
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+  }
+
+  .content-section {
+    padding: 40px 15px;
+  }
+
+  .wrapper {
+    flex: 0 1 calc(50% - 15px) !important;
+    max-width: 280px !important;
   }
 }
 
-.switch-div:hover {
-  background-color: #2F2882;
-  box-shadow: 0 0 15px rgba(47, 40, 130, 0.7);
-  transform: scale(1.05);
-}
+@media (max-width: 480px) {
+  .timeline-section {
+    padding: 40px 10px;
+  }
 
-.switch-div.active:hover {
-  background-color: #2F2882;
-  box-shadow: 0 0 15px rgba(47, 40, 130, 0.7);
-  transform: scale(1.1);
-}
+  .timeline-title {
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+  }
 
-.switch-div:not(.active):hover {
-  background-color: #03002A;
-  box-shadow: 0 0 15px rgba(3, 0, 42, 0.7);
-  transform: scale(1.05);
-}
+  .timeline-header {
+    margin-bottom: 30px;
+  }
 
-.switch-div::before {
-  content: '';
-  position: absolute;
-  top: -4px;
-  left: -4px;
-  right: -4px;
-  bottom: -4px;
-  border-radius: 34px;
-  border: 2px solid transparent;
-  background: linear-gradient(45deg, #2F2882, #03002A);
-  z-index: -1;
-  transition: opacity 0.3s ease;
-  opacity: 0;
-  background-size: 200% 200%;
-}
+  .timeline-slider-wrapper {
+    padding: 25px 5px;
+  }
 
-.switch-div:hover::before {
-  opacity: 1;
-  background-position: 100% 100%;
-  transition: opacity 0.4s ease, background-position 0.4s ease;
-}
+  .timeline-items {
+    gap: 20px;
+    flex-direction: column;
+  }
 
-.fade-enter {
-  opacity: 0;
-}
-.fade-enter-active {
-  opacity: 1;
-  transition: opacity 500ms ease-in-out;
-}
-.fade-exit {
-  opacity: 1;
-}
-.fade-exit-active {
-  opacity: 0;
-  transition: opacity 500ms ease-in-out;
+  .timeline-connector-line {
+    display: none;
+  }
+
+  .timeline-dot {
+    width: 14px;
+    height: 14px;
+  }
+
+  .timeline-item.active .timeline-dot {
+    width: 20px;
+    height: 20px;
+  }
+
+  .label-year {
+    font-size: 0.75rem;
+  }
+
+  .label-text {
+    font-size: 0.95rem;
+  }
+
+  .content-section {
+    padding: 30px 10px;
+  }
+
+  .wrapper {
+    flex: 0 1 100% !important;
+    max-width: 280px !important;
+  }
 }

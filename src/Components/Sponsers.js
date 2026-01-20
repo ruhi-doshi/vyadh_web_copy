@@ -1,68 +1,113 @@
 import React from "react";
+import { motion } from "framer-motion";
 import altium from "../Assets/Altium.png";
 import protocase from "../Assets/protocase.png";
 import solidworks from "../Assets/solidworks.png";
 import pcbway from "../Assets/pcbway.png";
-import Ansys from '../Assets/ansys.png';
-import DP from '../Assets/DP.png';
-import ACC from '../Assets/ACC.png';
-import Greenko from '../Assets/Greenko.png';
-import './Sponsers.css';
+import Ansys from "../Assets/ansys.png";
+import DP from "../Assets/DP.png";
+import UIS from "../Assets/UIS.png";
+import "./Sponsers.css";
 
 const sponsors = [
-  { href: "https://www.altium.com/in", imgSrc: altium, altText: "Altium Logo" },
-  { href: "https://www.protocase.com/", imgSrc: protocase, altText: "Protocase Logo" },
-  { href: "https://solidworks.com/", imgSrc: solidworks, altText: "SolidWorks Logo" },
-  { href: "https://www.pcbway.com/", imgSrc: pcbway, altText: "PCBWsy Logo" },
-  { href: "https://www.ansys.com/", imgSrc: Ansys, altText: "Ansys Logo" },
-  { href: "https://dreampolymers.com/", imgSrc: DP, altText: "DP Logo" },
-  { href: "https://www.acclimited.com/", imgSrc: ACC, altText: "ACC Logo" },
-  { href: "https://greenkogroup.com/", imgSrc: Greenko, altText: "Greenko Logo" },
-  // Add more sponsors here
+    {
+        href: "https://www.altium.com/in",
+        imgSrc: altium,
+        altText: "Altium Logo",
+    },
+    {
+        href: "https://www.protocase.com/",
+        imgSrc: protocase,
+        altText: "Protocase Logo",
+    },
+    {
+        href: "https://solidworks.com/",
+        imgSrc: solidworks,
+        altText: "SolidWorks Logo",
+    },
+    {
+        href: "https://www.pcbway.com/",
+        imgSrc: pcbway,
+        altText: "PCBWay Logo",
+    },
+    { href: "https://www.ansys.com/", imgSrc: Ansys, altText: "Ansys Logo" },
+    { href: "https://dreampolymers.com/", imgSrc: DP, altText: "DP Logo" },
+    { href: "https://uis.edu/", imgSrc: UIS, altText: "UIS Logo" },
 ];
 
-const Sponsers = () => {
-  return (
-    <div className="bg-vyadhColor-100 w-full p-[6.25vw] pt-[0.25vw] mt-[2vw] inline-block">
-      <div id="title">
-        <h1>SPONSORS</h1>
-      </div>
+const Sponsors = () => {
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.1,
+                delayChildren: 0.2,
+            },
+        },
+    };
 
-      <style jsx>{`
-        #title {
-          text-align: center;
-          color: #FFF;
-          font-family: 'Lato', sans-serif;
-          font-weight: 300;
-          padding-left: 10px;
-        }
+    const cardVariants = {
+        hidden: { opacity: 0, y: 40, scale: 0.8 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            transition: {
+                duration: 0.6,
+                ease: "easeOut",
+            },
+        },
+    };
 
-        #title h1 {
-          font-size: 50px;
-          font-weight: bold;
-          letter-spacing: 10px;
-          background: -webkit-linear-gradient(white, #03002A);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          margin: 20px;
-        }
-      `}</style>
+    return (
+        <div className="sponsors-wrapper">
+            {/* Decorative elements */}
+            <div className="sponsors-decoration">
+                <div className="deco-blur deco-1"></div>
+                <div className="deco-blur deco-2"></div>
+            </div>
 
-      <div className={`grid gap-[5vw] ${
-        sponsors.length > 6 
-          ? "grid-cols-4" 
-          : "grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4" 
-      } auto-rows-auto responsive-grid`}>
-        {sponsors.map((sponsor, index) => (
-          <a key={index} href={sponsor.href} target="_blank" rel="noopener noreferrer">
-            <figure className="size-[40vw] bg-white rounded-[4vw] flex justify-center items-center md:size-[14.9vw] md:rounded-[1vw] sponsor-card">
-              <img src={sponsor.imgSrc} alt={sponsor.altText} loading="lazy"/>
-            </figure>
-          </a>
-        ))}
-      </div>
-    </div>
-  );
+            {/* Title Section */}
+            <div className="sponsors-header">
+                <h1 className="sponsors-title">SPONSORS</h1>
+            </div>
+
+            {/* Sponsors Grid */}
+            <motion.div
+                className="sponsors-grid-wrapper"
+                variants={containerVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.3 }}
+            >
+                {sponsors.map((sponsor, index) => (
+                    <motion.a
+                        key={index}
+                        href={sponsor.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="sponsor-link"
+                        variants={cardVariants}
+                        whileHover={{ y: -15, scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                    >
+                        <div className="sponsor-card">
+                            <div className="card-glow"></div>
+                            <div className="card-content">
+                                <img
+                                    src={sponsor.imgSrc}
+                                    alt={sponsor.altText}
+                                    loading="lazy"
+                                />
+                            </div>
+                            <div className="card-border"></div>
+                        </div>
+                    </motion.a>
+                ))}
+            </motion.div>
+        </div>
+    );
 };
 
-export default Sponsers;
+export default Sponsors;
