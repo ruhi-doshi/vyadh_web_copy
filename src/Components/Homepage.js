@@ -28,7 +28,7 @@ const Homepage = () => {
       bgImage: '/templates/bg3.jpeg',
       heading: 'Vyadh: Where the journey is just the beginning.',
       paragraph: '',
-      carouselImage: '/templates/carousel3 (1).png',
+      carouselImage: '/templates/carousel3.png',
     },
     {
       bgImage: '/templates/bg4.jpeg',
